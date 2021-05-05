@@ -1,0 +1,52 @@
+@import '../../sass/shared';
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: $radius;
+    cursor: pointer;
+
+    &--filled {
+        color: $white;
+        background-color: $secondary;
+        border: 1px solid $secondary;
+
+        &:hover {
+            background-color: $secondary-hover;
+            border-color: $secondary-hover;
+        }
+
+        &:active {
+            background-color: #1f4e96;
+            border-color: #1f4e96;
+        }
+    }
+
+    &--outline {
+        color: $secondary;
+        background-color: $white;
+        border: 1px solid $secondary;
+
+        &:hover {
+            color: rgba(52, 131, 250, 0.65);
+        }
+
+        &:active {
+            color: $secondary;
+        }
+    }
+
+    &--full-width {
+        flex: 1;
+        display: inline-flex;
+        width: 100%;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+}

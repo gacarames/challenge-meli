@@ -1,0 +1,7 @@
+@import '../../sass/shared';
+@import '../../sass/mixins';
+
+.logo {
+    @include displayFlex;
+    flex-basis: auto;
+}

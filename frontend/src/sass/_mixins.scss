@@ -1,0 +1,24 @@
+@mixin displayFlex($display: flex, $flexDirection: row, $justifyContent: stretch, $alignItems: stretch) {
+    display: $display;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin ellipsis-multiline($font-size, $line-height, $lines-to-show, $margin: '0') {
+    $height-calc: $font-size * $line-height * $lines-to-show;
+    display: block;
+    display: -webkit-box;
+    font-size: $font-size * 1px;
+    line-height: $line-height * 1px;
+    max-height: ($height-calc + $margin) * 1px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+
+    p:not(:first-of-type) {
+        display: none;
+    }
+}

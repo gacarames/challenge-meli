@@ -1,0 +1,15 @@
+@import '../../sass/shared';
+
+.description {
+    width: 100%;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: $gap-large;
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+}

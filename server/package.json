@@ -1,0 +1,25 @@
+{
+  "name": "api-challenge-meli",
+  "version": "1.0.0",
+  "description": "requested endpoints",
+  "main": "index.js",
+  "scripts": {
+    "dev": "env-cmd -f .env.development nodemon ./server.js",
+    "deploy": "env-cmd -f .env.production"
+  },
+  "author": "gacarames@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

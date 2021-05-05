@@ -1,0 +1,21 @@
+@import '../../sass/shared';
+
+.to-back {
+    color: $black;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        color: $secondary-hover;
+    }
+
+    &:active {
+        color: $secondary-active;
+    }
+
+    @media screen and (min-width: $medium-breackpoint) {
+        display: inline;
+    }
+}

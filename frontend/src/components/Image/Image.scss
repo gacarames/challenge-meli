@@ -1,0 +1,19 @@
+@import '../../sass/shared';
+
+.image {
+    &__figure {
+        margin: 0;
+    }
+
+    &__image {
+        display: block;
+        height: auto;
+        width: 100%;
+        max-height: 280px;
+        object-fit: contain;
+
+        @media screen and (min-width: $medium-breackpoint) {
+            max-height: 480px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../sass/shared';
+@import '../../sass/mixins';
+
+.thumbnail {
+    @include displayFlex;
+    flex-basis: auto;
+
+    &__figure {
+        height: 106px;
+        width: 106px;
+        margin: 0;
+        border-radius: 4px;
+        overflow: hidden;
+
+        @media screen and (min-width: $medium-breackpoint) {
+            height: 180px;
+            width: 180px;
+        }
+    }
+
+    &__thumbnail {
+        display: block;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+}

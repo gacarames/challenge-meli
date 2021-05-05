@@ -1,0 +1,49 @@
+@import '../../sass/shared';
+@import '../../sass/mixins';
+
+.search {
+    flex: 1;
+
+    ::placeholder {
+        color: #aaa;
+        font-weight: 400;
+    }
+
+    &__form {
+        @include displayFlex;
+        margin-left: $gap-medium;
+        box-shadow: $static-shadow;
+        border-radius: 2px;
+        overflow: hidden;
+
+        @media screen and (min-width: $medium-breackpoint) {
+            flex-direction: row;
+            margin-left: $gap-large;
+        }
+    }
+
+    &__input {
+        color: $grey-ligth;
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+        border: none;
+        padding: $gap-small $gap-medium;
+
+        @media screen and (min-width: $medium-breackpoint) {
+            padding-left: 12px;
+        }
+    }
+
+    &__submit {
+        @include displayFlex($justifyContent: center, $alignItems: center);
+        background-color: $grey-light-two;
+        padding: $gap-small 10px;
+        border: none;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+}

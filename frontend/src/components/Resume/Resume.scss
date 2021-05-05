@@ -1,0 +1,21 @@
+@import '../../sass/shared';
+.resume {
+    width: 100%;
+
+    &__copy {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    &__label {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 500;
+        margin-top: $gap-medium;
+        margin-bottom: $gap-large;
+    }
+
+    &__price {
+        margin-bottom: $gap-large;
+    }
+}

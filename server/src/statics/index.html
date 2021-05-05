@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Challenge Mercadolibre</title>
+	<style>
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+			font-size: 16px;
+			color: #333;
+			padding: 16px;
+		}
+
+		ul {
+			padding-left: 0;
+			list-style: none;
+		}
+
+		li {
+			margin: 0;
+			padding: 16px 0;
+		}
+
+		li p {
+			margin: 16px 0;
+		}
+
+		li p a {
+			text-decoration: none;
+		}
+
+		li span {
+			display: block;
+			background-color: #ededed;
+			padding: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Challenge Api</h1>
+	</header>
+	<main>
+		<h2>Metodos disponibles</h2>
+		<h3>Express Api REST</h3>
+		<ul>
+			<li>
+				Realizar una consulta por búsqueda:<br>
+				<p>
+					<b>GET: </b>
+					<a href="/api/items?q=" target="_blank" rel="noopener noreferrer">/api/items?q=:query</a></p>
+			</li>
+			<li>
+				Realizar una consulta por id:<br>
+				<p>
+					<b>GET: </b>
+					<a href="/api/items/" target="_blank" rel="noopener noreferrer">/api/items/:id</a></p>
+			</li>
+		</ul>
+		<h3>GraphQL</h3>
+		<ul>
+			<li>
+				Realizar consulta completa o de propiedades especificas de una lista de productos:<br>
+				<p>
+					<b>GET: </b><a href="/api/graphql?query=" target="_blank"
+						rel="noopener noreferrer">/api/graphql?search=</a>
+				</p>
+				<span>
+					{ search(query:"<i>search_string</i>") { id, title, ... } }
+				</span>
+			</li>
+			<li>
+				Realizar consulta completa o de propiedades especificas de un producto por id:<br>
+				<p>
+					<b>GET: </b>
+					<a href="/api/graphql?query=" target="_blank" rel="noopener noreferrer">/api/graphql?product=</a>
+				</p>
+				<span>
+					{ product(id:"<i>product_id</i>") { id, title, ... } }
+				</span>
+			</li>
+		</ul>
+	</main>
+</body>
+
+</html>

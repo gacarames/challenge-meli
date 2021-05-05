@@ -1,0 +1,9 @@
+@import '../../sass/shared';
+
+.shipping {
+    display: block;
+
+    &__icon {
+        margin-left: $gap-small;
+    }
+}

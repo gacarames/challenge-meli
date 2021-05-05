@@ -1,0 +1,8 @@
+@import '../../sass/shared';
+
+.product {
+    &__description,
+    &__resume {
+        padding: $gap-large;
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../sass/shared';
+$root: price;
+.price {
+    display: block;
+    font-weight: 300;
+
+    &--resume {
+        .#{$root} {
+            &__currency {
+                font-size: 44px;
+                margin-right: 8px;
+            }
+
+            &__value {
+                font-size: 44px;
+            }
+
+            &__decimal {
+                font-size: 28px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &--result {
+        font-weight: 400;
+        .#{$root} {
+            &__currency,
+            &__value {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            &__decimal {
+                font-size: 14px;
+                line-height: 14px;
+                margin-left: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../sass/shared';
+
+.breadcrumb {
+    display: block;
+    width: 100%;
+    padding: $gap-medium $gap-small;
+
+    & :first-child {
+        &::after {
+            content: '|';
+            color: $grey-ligth;
+            padding-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    @media screen and (min-width: $medium-breackpoint) {
+        padding: $gap-medium 0;
+    }
+
+    &__link {
+        color: $grey-ligth;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        white-space: nowrap;
+        margin: 0 0 2px;
+
+        &::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: url(/right-chevron.svg) no-repeat center;
+            background-size: contain;
+            margin: 0 6px;
+        }
+
+        &:last-of-type {
+            font-weight: 500;
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}

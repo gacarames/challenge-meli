@@ -1,0 +1,21 @@
+type search {  
+    author: {
+        name: String
+        lastname: String
+    },  
+    categories: [categorie],
+    items: [
+        {
+            id: String,
+            title: String,
+            price: {        
+                currency: String,
+                amount: Number,
+                decimals: Number
+            },
+            picture: String,
+            condition: String,
+            free_shipping: Boolean
+        }
+    ]
+}

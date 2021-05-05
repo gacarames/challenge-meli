@@ -1,0 +1,81 @@
+@import '../../sass/shared';
+@import '../../sass/mixins';
+
+.item {
+    border-bottom: 1px solid #f5f5f5;
+
+    &__wrapper {
+        @include displayFlex($justifyContent: center, $alignItems: flex-start);
+        flex: 2;
+        padding: $gap-medium 0;
+    }
+
+    &__link {
+        color: $grey;
+        text-decoration: none;
+    }
+
+    &__thumbnail {
+        padding: 0 $gap-medium;
+    }
+
+    &__description {
+        @include displayFlex($flexDirection: column);
+        flex: 1;
+
+        padding-right: $gap-medium;
+        @media screen and (min-width: $medium-breackpoint) {
+            flex-direction: row;
+        }
+
+        &-left {
+            @include displayFlex($flexDirection: column);
+            flex: 2;
+        }
+
+        &-rigth {
+            @include displayFlex($justifyContent: flex-start);
+            flex: 1;
+
+            @media screen and (min-width: $medium-breackpoint) {
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: $medium-breackpoint) {
+            padding-right: 32px;
+            margin-top: 24px;
+        }
+    }
+
+    &__price {
+        @include displayFlex($alignItems: center);
+        margin-bottom: $gap-medium;
+
+        @media screen and (min-width: $medium-breackpoint) {
+            margin-bottom: $gap-large;
+        }
+    }
+
+    &__location {
+        color: $grey-two;
+        font-size: 14px;
+    }
+
+    &__title {
+        color: $grey;
+        font-size: 16px;
+        line-height: 22px;
+        max-height: 54px;
+        overflow: hidden;
+        font-weight: 400;
+        margin: 0 0 10px;
+
+        @include ellipsis-multiline(16, 22, 2, 0);
+
+        @media screen and (min-width: $medium-breackpoint) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
