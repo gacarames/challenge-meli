@@ -4,8 +4,6 @@ const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 const fetch = require('node-fetch');
 
-const API_URL = 'http://localhost:3000/api'
-
 var schema = buildSchema(`
   type Product {
     id: String,
@@ -47,7 +45,7 @@ var root = {
 
   product: (args) => {
     const { id } = args
-    return fetch(`${API_URL}/items/${id}`)
+    return fetch(`${process.env.ENDPOINT_APP}/items/${id}`)
       .then(res => res.json())
       .then(data => data.item)
       .catch(err => {
@@ -57,7 +55,7 @@ var root = {
 
   search: (args) => {
     const { query } = args
-    return fetch(`${API_URL}/items?q=${query}`)
+    return fetch(`${process.env.ENDPOINT_APP}/items?q=${query}`)
       .then(res => res.json())
       .then(data => data.items)
       .catch(err => {

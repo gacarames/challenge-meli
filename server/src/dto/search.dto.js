@@ -17,11 +17,11 @@ const singleDto = (item) => ({
 });
 
 const multipleDto = (data) => {
-    const searchData = data[0];
-    const getResults = _.pick(searchData, 'results', 'filters');
-    const { path_from_root } = getResults.filters[0].values[0];
+    const searchData = data;
+    const getResults = _.pick(searchData, 'results', 'available_filters');
+    const { path_from_root } = getResults.available_filters[0].values[0];
     const { results } = getResults;
-    const itemIimit = results.slice(0, 4);
+    const itemIimit = results.slice(0, 12);
 
     const filterProps = _.map(itemIimit, (item) => {
         return singleDto(item);
