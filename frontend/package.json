@@ -1,66 +1,82 @@
 {
-    "name": "frontend-challenge-meli",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "start": "env-cmd -f .env.development react-scripts start",
-        "build": "env-cmd -f .env.production react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "storybook": "start-storybook -p 6006 -s public",
-        "build-storybook": "build-storybook -s public"
-    },
-    "eslintConfig": {
-        "extends": "react-app",
-        "overrides": [
-            {
-                "files": [
-                    "**/*.stories.*"
-                ],
-                "rules": {
-                    "import/no-anonymous-default-export": "off"
-                }
-            }
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
+  "name": "frontend-challenge-meli",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -f .env.development react-scripts start",
+    "build": "env-cmd -f .env.production react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "precommit": "lint-stage"
+  },
+  "lint-stage": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
         ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.4.0",
-        "@testing-library/user-event": "^7.1.2",
-        "axios": "^0.21.1",
-        "clsx": "^1.1.1",
-        "express": "^4.17.1",
-        "lodash": "^4.17.21",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-redux": "^7.2.3",
-        "react-router-dom": "^5.1.2",
-        "react-scripts": "3.3.0",
-        "redux": "^4.0.5",
-        "redux-devtools-extension": "^2.13.9",
-        "redux-thunk": "^2.3.0",
-        "sass": "^1.49.9",
-        "webpack-spritesmith": "^1.1.0"
-    },
-    "devDependencies": {
-        "@storybook/addon-actions": "^6.2.8",
-        "@storybook/addon-essentials": "^6.2.8",
-        "@storybook/addon-links": "^6.2.8",
-        "@storybook/node-logger": "^6.2.8",
-        "@storybook/preset-create-react-app": "^3.1.7",
-        "@storybook/react": "^6.2.8",
-        "env-cmd": "^10.0.1"
-    }
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.49.9",
+    "webpack-spritesmith": "^1.1.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.2.8",
+    "@storybook/addon-essentials": "^6.2.8",
+    "@storybook/addon-links": "^6.2.8",
+    "@storybook/node-logger": "^6.2.8",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.8",
+    "env-cmd": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.1"
+  }
 }
