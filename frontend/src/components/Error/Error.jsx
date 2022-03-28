@@ -1,6 +1,7 @@
 import React from "react";
+import Button from "../Button";
 
-class ErrorBoundary extends React.Component {
+export default class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +25,10 @@ class ErrorBoundary extends React.Component {
         <div>
           <h1>Hubo un error:</h1>
           <p>{this.state.errorMessage}</p>
-          <Button styleButton="primary" fullWidth>
+          <Button
+            styleButton="primary"
+            onClick={() => (window.location.href = "/")}
+          >
             Recargar la pagina
           </Button>
         </div>
