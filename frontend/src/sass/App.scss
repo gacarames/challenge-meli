@@ -1,22 +1,25 @@
-@import './shared';
+@import "./shared";
 
 * {
-    outline: none;
+  outline: none;
 }
 
 #root {
-    height: 100%;
-    min-height: 100vh;
-    background-color: $grey-light-two;
-    padding-bottom: 32px;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 32px;
+}
+
+.main {
+  background-color: $grey-light-two;
 }
 
 .card {
-    background-color: $white;
-    box-shadow: $static-shadow;
-    overflow: hidden;
+  background-color: $white;
+  box-shadow: $static-shadow;
+  overflow: hidden;
 
-    @media screen and (min-width: $medium-breackpoint) {
-        border-radius: $radius;
-    }
+  @media screen and (min-width: $medium-breackpoint) {
+    border-radius: $radius;
+  }
 }
